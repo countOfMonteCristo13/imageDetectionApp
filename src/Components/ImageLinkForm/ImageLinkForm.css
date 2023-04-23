@@ -1,0 +1,126 @@
+.linkform-section{
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.linkform-input{
+    width: 90%;
+}
+
+
+.form{
+    width: 100%;
+    background:-moz-linear-gradient(89deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%); 
+    background:-webkit-linear-gradient(89deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%);
+    background:-o-linear-gradient(89deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EE82EE', endColorstr='#00D1FF', GradientType=1 );
+    background:-ms-linear-gradient(89deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%);
+    background:linear-gradient(89deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%);
+}
+
+.detect-btn{
+    background: rgba(238, 130, 238, 1);
+    border-style: none;
+    font-weight: 600;
+}
+
+.detect-btn:hover{
+    background: rgba(255, 74, 255, 1);
+}
+
+.detect-btn,
+.detect-input{
+    height: 2.5rem;
+}
+
+.magic-brain{
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.linkform-input-section{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+}
+
+.linkform-input-section input,
+.linkform-input-section button{
+    font-size: 1.25rem;
+}
+
+.linkform-input-section input{
+    width: 100%;
+}
+
+.linkform-input-section button{
+    width: fit-content;
+    padding: 0.5rem 2rem;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .magic-brain{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .magic-brain{
+        font-size: 1rem;
+    }
+
+    .linkform-input-section{
+        padding: 1.5rem;
+    }
+
+    .linkform-input-section input,
+    .linkform-input-section button{
+    font-size: 1rem;
+    }
+
+    .linkform-input-section button{
+        padding: 0.5rem 1rem;
+    }
+    
+
+}
+
+@media screen and (max-width:450px) {
+    .linkform-section{
+        padding: 0 1rem;
+    }
+
+    .linkform-input-section{
+        padding: 1.3rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .linkform-input-section input,
+    .linkform-input-section button{
+    font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (max-width:300px) {
+    .magic-brain{
+        font-size: 0.8rem;
+    }
+
+    .linkform-input-section{
+        padding: 1rem;
+    }
+
+    .linkform-input-section input,
+    .linkform-input-section button{
+    font-size: 0.8rem;
+    }
+}

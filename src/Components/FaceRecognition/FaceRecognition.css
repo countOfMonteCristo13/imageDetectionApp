@@ -1,0 +1,101 @@
+.go-back{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(255,255,255,0.85);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(255,255,255,0.85);
+    box-shadow: 1px 1px 3px 0px rgba(255,255,255,0.85);
+}
+
+.go-back:hover{
+    transform: scale(1.05);
+}
+
+.go-back img{
+    max-width: 1.5rem;
+}
+
+
+
+.bounding-box{
+    position: absolute;
+    box-shadow: 0 0 0 3px rgba(238, 130, 238, 1) inset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.detection-section{
+    gap: 2rem;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.detection-img-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.detection-img{
+    position: relative;
+    width: fit-content;
+}
+
+.detection-img img{
+    width: 100%;
+    max-width: 500px;
+    height:auto;
+    object-fit: cover;
+}
+
+.logos-info{
+    background: black;
+    color: white;
+    padding: 1rem 2rem 1.5rem 2rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    max-width: 500px;
+
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+}
+
+.logos-info_logo{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.logos-info_logo h4,
+.logos-info h3{
+    margin: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width:576px) {
+
+    .go-back{
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .go-back img{
+        max-width: 1rem;
+    }
+    
+}

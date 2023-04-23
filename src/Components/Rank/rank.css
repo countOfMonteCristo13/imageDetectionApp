@@ -1,0 +1,43 @@
+.rank-section{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rank-text{
+    font-size: 1.5rem;
+}
+
+.rank-count{
+    font-size: 3rem;
+}
+
+@media screen and (max-width:1024px) {
+    .rank-text{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .rank-text{
+        font-size: 1rem;
+    }
+
+    .rank-count{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .rank-section{
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .magic-brain{
+        font-size: 0.8rem;
+    }
+}

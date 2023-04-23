@@ -1,13 +1,72 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+
+    font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0B0B0C;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button{
+  cursor: pointer;
+}
+
+.forma-wrapper{
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.forma{
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+  box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+
+  max-width: 500px;
+}
+
+.forma-section{
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.forma-title{
+  font-size: 3rem;
+}
+
+
+@media screen and (max-width:576px){
+  .forma{
+    max-width: 400px;
+  }
+
+  .forma-section{
+    padding: 1.5rem;
+  }
+
+  .forma-title{
+    font-size: 2rem;
+  }
+
+  .forma-input{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width:300px){
+  .forma-wrapper{
+    padding: 0 1.5rem;
+  }
+
 }

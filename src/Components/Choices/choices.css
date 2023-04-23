@@ -1,0 +1,90 @@
+.logos-wrapper{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.logos-section{
+    padding: 3rem 1.5rem;
+    background: black;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    max-width: 700px;
+}
+
+.logos{
+    justify-content: space-around;
+}
+
+.logos-title h2{
+    color: white;
+    font-size: 3rem;
+}
+
+.logo{
+    padding: 2rem;
+    background: black;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.15s;
+}
+
+.logo:hover{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+    box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.85);
+}
+
+.logo img{
+    max-width: 128px;
+    
+}
+
+.logo h3{
+    color:white;
+    margin: 0;
+}
+
+@media screen and (max-width:576px) {
+    .logos-title h2{
+        font-size: 2rem;
+    }
+
+    .logo{
+        padding: 1rem;
+    }
+
+    .logo img{
+        max-width: 100px;
+        
+    }
+
+    .logo h3{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .logos-section{
+        padding: 2rem 1rem;
+    }
+
+
+    .logo img{
+        max-width: 80px;
+        
+    }
+
+    .logo h3{
+        font-size: 0.8rem;
+    }
+}
