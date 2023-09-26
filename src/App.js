@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import Clarifai from 'clarifai';
+// import Clarifai from 'clarifai';
 
-import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm'
-import Rank from './Components/Rank/Rank'
 import ParticlesBG from './Components/ParticlesBG/ParticlesBG';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
-import SignIn from './Components/SignIn/SignIn';
-import Registration from './Components/Registration/Registration';
 import Choices from './Components/Choices/Choices';
 
 
@@ -67,18 +63,7 @@ import Choices from './Components/Choices/Choices';
         boxes:[],// vrednosti koje dobijamo kao povratnu informaciju za detektovanje slika!
         logoNames:[],
         route:'home',
-        isSignedIn:false,
-        user:{
-          id: '',
-          name: '',
-          email: '',
-          entries: 0, 
-          joined: ''
-        }
     }
-
-
-
 
 
 class App extends Component  {
@@ -96,15 +81,15 @@ class App extends Component  {
     //     .then(console.log) //isto je kao i da sam napisao data => console.log(data)
     // } Ova metoda vise ne treba, samo pogledaj sta radi!!!
 
-    loadUser = (data) =>{
-      this.setState({user: {
-        id: data.id,
-        name: data.name,
-        email: data.email,
-        entries: data.entries, 
-        joined: data.joined
-      }})
-    }
+    // loadUser = (data) =>{
+    //   this.setState({user: {
+    //     id: data.id,
+    //     name: data.name,
+    //     email: data.email,
+    //     entries: data.entries, 
+    //     joined: data.joined
+    //   }})
+    // }
 
   calculateBoxLocation = (data) =>{ // izracuvana lokaciju face na slici
 
@@ -229,20 +214,17 @@ class App extends Component  {
   }
 
   onRouteChange = (rout) =>{
-    if(rout === 'signin'){
-      this.setState(initialState);
-    }else if(rout === 'home'){
-      this.setState({isSignedIn:true,boxes:[],imageUrl:'',logoNames:[]});
+    if(rout === 'home'){
+      this.setState({boxes:[],imageUrl:'',logoNames:[]});
     }
     this.setState({route:rout});
   }
 
   render(){
-    const {isSignedIn, route, boxes, imageUrl,logoNames} = this.state;
+    const {route, boxes, imageUrl,logoNames} = this.state;
     return (
       <div className="App">
           <ParticlesBG />
-
           {
         route === 'home' ? (
           <div>
@@ -271,11 +253,7 @@ class App extends Component  {
                 </>
               ) : null
             )
-          
-        
       }
-
-          
       </div>
     );
   }
