@@ -66,7 +66,7 @@ import Choices from './Components/Choices/Choices';
         imageUrl:'',
         boxes:[],// vrednosti koje dobijamo kao povratnu informaciju za detektovanje slika!
         logoNames:[],
-        route:'signin',
+        route:'home',
         isSignedIn:false,
         user:{
           id: '',
@@ -242,28 +242,16 @@ class App extends Component  {
     return (
       <div className="App">
           <ParticlesBG />
-          <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/> 
 
           {
         route === 'home' ? (
           <div>
             <Choices onRouteChange={this.onRouteChange} />
           </div>
-        ) : (
-          route === 'signin' ? (
-            <div>
-              <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-            </div>
-          ) : (
-            route === 'registration' ? (
-              <div>
-                <Registration loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-              </div>
-            ) : (
+        ) :  (
               route === 'face' ? (
                 <>
                   <Logo/>
-                  <Rank name={this.state.user.name} entries={this.state.user.entries} />
                   <ImageLinkForm 
                     onInputChange={this.onInputChange} 
                     onSubmit={this.onSubmit}
@@ -274,7 +262,6 @@ class App extends Component  {
               ) : route === 'items' ? (
                 <>
                   <Logo/>
-                  <Rank name={this.state.user.name} entries={this.state.user.entries} />
                   <ImageLinkForm 
                     onInputChange={this.onInputChange} 
                     onSubmit={this.onSubmit}
@@ -284,8 +271,8 @@ class App extends Component  {
                 </>
               ) : null
             )
-          )
-        )
+          
+        
       }
 
           
